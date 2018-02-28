@@ -32,5 +32,8 @@ Installation
 
      http://localhost:8080/
 
-
+Screenshot
+==========
+.. image:: .snapshot.png
+   :width: 400px
 

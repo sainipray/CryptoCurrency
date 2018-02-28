@@ -52,8 +52,41 @@ export class Chart extends React.Component {
                     text: currency[id]['title']
                 },
                 rangeSelector: {
+                    buttons: [{
+                        type: 'second',
+                        count: 5,
+                        text: 'Live'
+                    }, {
+                        type: 'minute',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'minute',
+                        count: 60,
+                        text: '1h'
+                    }, {
+                        type: 'day',
+                        count: 1,
+                        text: '1d'
+                    }, {
+                        type: 'week',
+                        count: 1,
+                        text: '1w'
+                    }, {
+                        type: 'month',
+                        count: 1,
+                        text: '1M'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
                     inputEnabled: true,
-                    selected: 1
+                    selected: 3
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickPixelInterval: 150,
+                    maxZoom: 2 * 1000
                 },
                 series: [{
                     name: 'Price',
